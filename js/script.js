@@ -1,9 +1,5 @@
-// const HEIGHT = window.innerHeight;
 const HEADERTITLE = document.querySelector(".site-title > a").innerText;
-// const IMAGES = document.querySelectorAll('img');
-// const HEADER = document.querySelector('body > header');
-// const HEADERHEIGHT = HEADER.style.height;
-// const HEADERIMAGE = HEADER.style.background;
+
 
 // load header background image depending of widow width
 var WIDTH;
@@ -26,11 +22,6 @@ function header() {
     //document.querySelector('header').
   }
 }
-
-// function size() {
-//   //console.log(window.innerWidth);
-//   document.querySelector('header').setAttribute("style", header(WIDTH));
-// }
 
 document.querySelector('header').setAttribute("style", header(WIDTH));
 displayScreenSize();
