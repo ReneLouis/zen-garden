@@ -1,4 +1,4 @@
-const HEIGHT = window.innerHeight;
+// const HEIGHT = window.innerHeight;
 const HEADERTITLE = document.querySelector(".site-title > a").innerText;
 // const IMAGES = document.querySelectorAll('img');
 // const HEADER = document.querySelector('body > header');
@@ -9,7 +9,6 @@ const HEADERTITLE = document.querySelector(".site-title > a").innerText;
 var WIDTH;
 function header() {
   WIDTH = window.innerWidth;
-  console.log(WIDTH);
   var pic = [];         // w & h of image
 
   if (WIDTH >= 1024) {
@@ -34,13 +33,20 @@ function header() {
 // }
 
 document.querySelector('header').setAttribute("style", header(WIDTH));
+displayScreenSize();
 
 // Call-back funstion size replaced by arrow function:
 window.addEventListener('resize', ()=>{document.querySelector('header').setAttribute("style", header(WIDTH))}, false);
+window.addEventListener('resize', displayScreenSize, false);
 
 // Add dimensions of window on page
+function displayScreenSize() {
   const DIMENSIONS = document.querySelector('footer > .dimensions');
+  while (DIMENSIONS.firstChild) {
+    DIMENSIONS.removeChild(DIMENSIONS.firstChild);
+  }
   var pageDims = document.createElement("div");   // Create div element to receive text
-  var dimText = document.createTextNode("Dimensions of window are " + WIDTH + " by " + HEIGHT);    // Create text node with dimensions
+  var dimText = document.createTextNode("Dimensions of window are " + window.innerWidth + " by " + window.innerHeight);    // Create text node with dimensions
   pageDims.appendChild(dimText);                  // Append text node to the div element
   DIMENSIONS.appendChild(pageDims);               // Append div element to footer > .dimensions.
+}
