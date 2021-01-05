@@ -18,6 +18,11 @@ main {
   margin: 5px;
 }
 
+figcaption {
+  font-size: 12px;
+  color: brown;
+}
+
 
 /* -----------------------------------------------------------
 h1 title style
