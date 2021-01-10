@@ -1,6 +1,5 @@
 const HEADERTITLE = document.querySelector(".site-title > a").innerText;
 const IMAGES = document.querySelectorAll('img');
-//const SIZES = [[1024, 682], [640, 426], [320, 213]];
 const SIZES = {small: {width: 320, height: 213},
                 medium: {width: 640, height: 426},
                 large: {width: 1024, height: 682}
@@ -55,11 +54,19 @@ function updateImageSize() {
     }
 }
 
-document.querySelector('header').setAttribute("style", header(WIDTH));
-displayScreenSize();
-updateImageSize();
+function lauch() {
+  displayScreenSize();
+  updateImageSize();
+  document.querySelector('header').setAttribute("style", header(WIDTH));
+}
+
+// document.querySelector('header').setAttribute("style", header(WIDTH));
+// displayScreenSize();
+// updateImageSize();
+lauch();
 
 // Call-back funstion size replaced by arrow function:
-window.addEventListener('resize', ()=>{document.querySelector('header').setAttribute("style", header(WIDTH))}, false);
-window.addEventListener('resize', displayScreenSize, false);
-window.addEventListener('resize', updateImageSize, false);
+// window.addEventListener('resize', ()=>{document.querySelector('header').setAttribute("style", header(WIDTH))}, false);
+// window.addEventListener('resize', displayScreenSize, false);
+// window.addEventListener('resize', updateImageSize, false);
+window.addEventListener('resize', lauch, false);
