@@ -1,0 +1,222 @@
+/* =============== COLOR PALETTE ================
+https://coolors.co/4c5454-edffec-9792e3-1ea896-e83151
+#4C5454 | rgb(76,84,84) - Davys Grey
+#F2F4F3 - Cultured (white-ish)
+#F7B05B - Yellow Orange
+#1EA896 - Persian Green
+#E83151 - Amaranth         */
+
+/* =============== FONT FAMILIES ===============
+font-family: 'Nunito', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Bevan', cursive; */
+
+/* =============== GLOBAL STYLES ================*/
+
+html {
+ box-sizing: border-box;
+ font-size: 0.85rem;
+}
+*, *:before, *:after {
+ box-sizing: inherit;
+}
+
+body {
+  color: #4C5454;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, arial, sans-serif;
+  /* font-size: 15px; */
+  line-height: 1.5;
+}
+img {
+  width: 300px;
+}
+
+a {
+  color: #1EA896;
+  text-decoration: none;
+}
+a:hover {
+  color: #E83151;
+  font-style: italic;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 300;
+  font-family: Nunito, helvetica, sans-serif;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.3rem;
+  /* font-weight: 500; */
+  font-family: 'Bevan', cursive;
+  margin: 0;
+}
+
+.wrapper {
+  width: 95%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+header h2 {
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.item-details h3 + p {
+  font-style: italic;
+}
+.item-details h3 ~ p {
+  margin: 0;
+}
+
+.wrapper > section {
+  border-bottom: 5px double #1EA896;
+}
+
+.wrapper > section:last-child {
+  border-style: none;
+}
+
+/* ================== PROFILE ===================*/
+
+header {
+  background: #4C5454;
+  color: #F2F4F3;
+}
+
+/* ================== PROJECTS ==================*/
+
+.projects {
+  background: #F2F4F3;
+
+}
+.project-item {
+  overflow: hidden;
+  padding: 15px;
+}
+/* .project-item img {
+  float:left;
+  margin-right: 20px;
+} */
+
+.project-item h3 {
+  margin-top: 0;
+}
+
+a.btn {
+  background: rgba(30, 168, 150, 0.8);
+  color: #4C5454;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+a.btn:hover {
+  background: #4C5454;
+  color: #E83151;
+}
+
+/* ============== WORK EXPERIENCE ===============*/
+
+.work-experience {
+  background: rgba(76, 84, 84, 30%);
+}
+
+/* .job-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin: 10px 0;
+  padding: 5px;
+} */
+
+/* ================= EDUCATION ==================*/
+
+/* ============= ADDITIONAL SKILLS ==============*/
+
+.additional_skills {
+  background: rgba(76, 84, 84, 30%);
+  }
+
+/* =============== CONTACT INFO =================*/
+
+footer {
+  background: #4C5454;
+  color: #F2F4F3;
+}
+/* ===================================================
+   =============== RESPONSIVE DESIGN =================
+   =================================================== */
+
+/* [_]================ SCREEN > 580px ===================*/
+
+@media screen and (min-width: 580px) {
+  /* ======== GLOBAL ========= */
+  html {
+    font-size: 0.88rem;
+  }
+  h1 {
+    font-size: 4.3rem;
+    font-weight: 300;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  /* ======== PROJECTS ========= */
+  .project-item img {
+    float:left;
+    margin-right: 20px;
+  }
+
+  /* ======= WORK EXPERIENCE ======== */
+  .job-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 10px 0;
+    padding: 5px;
+  }
+}
+
+/* ================ SCREEN > 800px ===================*/
+@media screen and (min-width: 800px) {
+
+  /* ========== GLOBAL STYLES ===========*/
+  html {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 6.25rem;
+    font-weight: 300;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+
+  .wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+
+  /* ========== CONTACT INFO ===========*/
+  .contact-list {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+  }
+  .contact-list a {
+    padding: 15px;
+  }
+}
