@@ -99,11 +99,12 @@ header {
 .project-item {
   overflow: hidden;
   padding: 15px;
+  text-align: center;
 }
-/* .project-item img {
-  float:left;
-  margin-right: 20px;
-} */
+
+.project-item h3, p {
+    text-align: left;
+}
 
 .project-item h3 {
   margin-top: 0;
@@ -128,13 +129,6 @@ a.btn:hover {
 .work-experience {
   background: rgba(76, 84, 84, 30%);
 }
-
-/* .job-item {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  margin: 10px 0;
-  padding: 5px;
-} */
 
 /* ================= EDUCATION ==================*/
 
