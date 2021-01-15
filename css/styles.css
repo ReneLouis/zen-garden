@@ -104,9 +104,10 @@ header {
   /* text-align: center; */
 }
 
-/* .project-item h3, p {
-    text-align: left;
-} */
+.project-item-text {
+  max-width: 300px;
+  margin: 0 auto;
+}
 
 .project-item h3 {
   margin-top: 0;
