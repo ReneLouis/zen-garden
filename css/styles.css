@@ -1,4 +1,4 @@
-/* =============== COLOR PALETTE ================
+éé/* =============== COLOR PALETTE ================
 https://coolors.co/4c5454-edffec-9792e3-1ea896-e83151
 #4C5454 | rgb(76,84,84) - Davys Grey
 #F2F4F3 - Cultured (white-ish)
@@ -85,6 +85,46 @@ header h2 {
   border-style: none;
 }
 
+a.btn {
+  background: rgba(30, 168, 150, 0.8);
+  color: #4C5454;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+a.btn:hover {
+  background: #4C5454;
+  color: #E83151;
+}
+
+/* ===================== NAV ====================*/
+
+/* .menu {
+  display: inline-block;
+  width: 120px;
+  text-align: center;
+  margin: 0;
+} */
+
+.menu {
+  display: none;
+}
+
+.buttons {
+  position: fixed;
+  bottom: 5px;
+  left: calc(50% - 96px); /* button is 80px + 6px padding + 2px margin */
+}
+
+button {
+  width: 80px;
+  height: 25px;
+  background: #E83151;
+  border-radius: 4px;
+}
+
 /* ================== PROFILE ===================*/
 
 header {
@@ -111,20 +151,6 @@ header {
 
 .project-item h3 {
   margin-top: 0;
-}
-
-a.btn {
-  background: rgba(30, 168, 150, 0.8);
-  color: #4C5454;
-  text-decoration: none;
-  padding: 8px;
-  border-radius: 4px;
-  display: inline-block;
-}
-
-a.btn:hover {
-  background: #4C5454;
-  color: #E83151;
 }
 
 /* ============== WORK EXPERIENCE ===============*/
@@ -208,7 +234,27 @@ footer {
   .wrapper {
     max-width: 800px;
     margin: 0 auto;
-    padding: 40px 0;
+    /* padding: 40px 0; */
+  }
+
+  /* ===================== NAV ====================*/
+
+  .menu {
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    margin: 0;
+  }
+
+  nav {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .buttons {
+    width: 60px;
+    display: none;
   }
 
   /* ========== CONTACT INFO ===========*/
