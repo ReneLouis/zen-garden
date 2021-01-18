@@ -116,18 +116,21 @@ nav {
 }
 a.btn.nav-button {
   margin: 0 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   width: 80px;
-  height: 25px;
-  background: rgba(232, 49, 81, 0.75); /* #E83151; */
+  background: rgba(232, 49, 81, 0.85); /* #E83151; */
   text-align: center;
   line-height: 1;
   font-size: 1.3rem;
   font-weight: bold;
-  /* color: #1EA896; */
+  color: #F2F4F3;
+  text-shadow: 6px 3px #4C5454;
 }
 
 a.btn.nav-button:hover {
-  color: #4C5454;
+  /* color: #4C5454; */
+  font-style: normal;
 }
 
 /* ================== PROFILE ===================*/
