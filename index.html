@@ -9,6 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="scripts/script.js" async>
+
+    </script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bevan&display=swap" rel="stylesheet">
@@ -28,9 +31,15 @@
       </header>
 
       <!-- ***********************  NAVIGATION MENU  *********************** -->
-      <section>
-        <nav class="wrapper" hidden>
-          <a class="btn menu" href="">Menu</a>
+      <section class="navigation">
+        <nav class="wrapper menu">
+          <a class="btn nav-btn">Menu</a>
+          <ul class="hide navigation-ribbon">
+            <li><a class="btn" href="#projects">Projects / Portfolio</a></li>
+            <li><a class="btn" href="#work-experience">Work Experience</a></li>
+            <li><a class="btn" class="btn" href="#education">Education</a></li>
+            <li><a class="btn" href="#additional-skills">Additional Skills</a></li>
+          </ul>
         </nav>
 
         <nav class="buttons">
@@ -40,7 +49,7 @@
       </section>
 
       <!-- ********************  PROJECTS / PORTFOLIO  ********************* -->
-      <section class="projects">
+      <section id="projects" class="projects">
         <div class="wrapper">
           <h2>Featured Projects</h2>
           <p>View selected projects below. More information can be found at <a href="https://renelouis.github.io/" target="_blank">ReneLouis.github.io</a>.</p>
@@ -69,7 +78,7 @@
       </section>
 
       <!-- ***********************  WORK EXPERIENCE  *********************** -->
-      <section class="work-experience item-details">
+      <section id="work-experience" class="work-experience item-details">
         <div class="wrapper">
           <h2>Work Experience</h2>
           <!-- <p>Optional paragraph for work experience summary. Not a part of the job details. Delete if not being used.</p> -->
@@ -199,7 +208,7 @@
       </section>
 
       <!-- ******************  EDUCATION & CERTIFICATIONS ****************** -->
-      <section class="education item-details">
+      <section id="education" class="education item-details">
         <div class="wrapper">
           <h2>Education</h2>
 
@@ -228,7 +237,7 @@
       </section>
 
       <!-- ******************  ADDITIONAL SKILLS ****************** -->
-      <section class="additional_skills">
+      <section id="additional-skills" class="additional_skills">
         <div class="wrapper">
           <h2>Additional Skills</h2>
           <ul>

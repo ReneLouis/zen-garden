@@ -1,4 +1,4 @@
-éé/* =============== COLOR PALETTE ================
+/* =============== COLOR PALETTE ================
 https://coolors.co/4c5454-edffec-9792e3-1ea896-e83151
 #4C5454 | rgb(76,84,84) - Davys Grey
 #F2F4F3 - Cultured (white-ish)
@@ -85,7 +85,7 @@ header h2 {
   border-style: none;
 }
 
-a.btn {
+.btn {
   background: rgba(30, 168, 150, 0.8);
   color: #4C5454;
   text-decoration: none;
@@ -94,7 +94,7 @@ a.btn {
   display: inline-block;
 }
 
-a.btn:hover {
+.btn:hover {
   background: #4C5454;
   color: #E83151;
 }
@@ -103,6 +103,7 @@ a.btn:hover {
 
 .menu {
   display: none;
+  height: 0;
 }
 
 .buttons {
@@ -114,7 +115,7 @@ a.btn:hover {
 nav {
   font-size: 0;
 }
-a.btn.nav-button {
+.btn.nav-button {
   margin: 0 10px;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -144,7 +145,6 @@ header {
 
 .projects {
   background: #F2F4F3;
-
 }
 .project-item {
   overflow: hidden;
@@ -241,25 +241,66 @@ footer {
 
   .wrapper {
     max-width: 800px;
-    margin: 0 auto;
-    /* padding: 40px 0; */
   }
 
   /* ===================== NAV ====================*/
 
-  .menu {
+  .navigation {
+    background: #F2F4F3;
+  }
+
+  nav.menu {
+    position: relative;
+    height: auto;
+    font-size: 1em;
+    padding: 0;
+    display: flex;
+  }
+
+ nav > ul {
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 120px;
+  }
+
+  .navigation-ribbon > li {
+    flex: 1 0 auto;
+    /* width: 200px; */
+  }
+
+  nav > ul > li > a.btn {
     display: inline-block;
+    width: 200px;
+    padding-left: 20px;
+  }
+
+  .hide {
+    display: none;
+  }
+
+
+  nav .nav-menu:hover  + nav > ul {
+    nav > ul {
+      display: block;
+      padding: 0;
+      margin: 0;
+      font-size: 0;
+    }
+  }
+
+  .nav-btn {
     width: 120px;
     text-align: center;
-    margin: 0;
   }
 
-  nav {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0;
+  nav>ul > li {
+    display: inline-block;
+    font-size: 1rem;
   }
-
   .buttons {
     width: 60px;
     display: none;
