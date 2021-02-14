@@ -1,0 +1,260 @@
+/* COLOR PALETTE: https://colorpalettes.net/color-palette-2564/
+#50423d - Dark brown
+#8d7361 - Caramel
+#c9bbae - Beige
+#eeebe7 - Cream
+#8b8da0 - Grey
+#E83151 - Red (for links)
+ */
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Josefin+Slab:ital,wght@1,200&display=swap');
+ /* 'Hachi Maru Pop' ; 'Josefin Slab' */
+@import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');
+/*  'Suez One' */
+
+/* BOX SIZING */
+html {
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* GENERAL STYLE */
+body {
+  background: #8d7361;
+  display: flex;
+  justify-content: center;
+}
+
+.page-wrapper {
+  background: #c9bbae;
+  margin: 0.5%;
+  border-radius: 10px;
+  flex: 0 1 1100px;
+}
+
+.page-wrapper > * {
+  border: 2px solid #50423d;
+  border-radius: 10px;
+  margin: 5px;
+  background: #eeebe7 ;
+}
+
+div.page-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* ======================= TEXT / LINKS ===================================*/
+p {
+  color: #50423d;
+  font-family: helvetica, sans-serif;
+}
+
+h3 {
+  font-family: 'Suez One', serif;
+  font-size: 1.5rem;
+  font-stretch: expanded;
+}
+a, li {
+  color: #8b8da0;
+  text-decoration: none;
+  font-family: helvetica, sans-serif;
+}
+a:hover {
+  color: #E83151;
+  font-style: italic;
+}
+
+/* ====================================================================*/
+/* ======================== INTRO / BANNER ============================*/
+
+section.intro {
+  flex: 1 1 500px; /* margin is 5 */
+}
+
+    header {
+      padding: 1em 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+      header > h1 {
+        font-family: 'Hachi Maru Pop', cursive;
+        font-size: 1.6rem;
+        margin: 0;
+        padding: 0.5rem 0;
+        transform: rotate(350deg);
+        flex: 0 0 auto;
+      }
+
+      header > h2 {
+        font-family: 'Josefin Slab', serif;
+        font-size: 1.5rem;
+        margin: 0;
+        padding-top: 1.5rem;
+        text-align: center;
+        flex: 1 0 250px;
+      }
+
+    .summary {
+      background-color: yellow;               /* HELPER */
+    }
+
+    .preamble {
+      background-color: pink;                 /* HELPER */
+    }
+
+/* ====================================================================*/
+/* ====================== MAIN SUPPORTING =============================*/
+
+div.main {
+  flex: 1 1 500px;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+}
+
+div.main > div {
+  border: 5px solid #c9bbae;
+  border-radius: 2rem;
+  margin: 2rem 10%;
+  /* flex: 1 1 calc(400px - 4rem); */
+  /* flex: 0 1 60%; */
+}
+
+div.main > footer {
+  flex: 1 0 100%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+div.main > footer > a {
+  display: inline-block;
+  flex: 1 0 10rem;
+}
+
+  /* ====================== HIDE & DISPLAY EACH SUBTEXT ============================*/
+
+div.main > div > h3 {
+  text-align: center;
+  color: #8d7361;
+  font-family: 'Hachi Maru Pop', cursive;
+}
+
+div.main > div > p {
+  display: none;
+}
+
+div.main > div:hover > p {
+  display: block;
+}
+
+
+/* ====================================================================*/
+/* ============================== ASIDE ===============================*/
+
+aside.sidebar {
+  flex: 0 0 250px;
+}
+
+  aside > div.wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+    aside > .wrapper ul {
+      list-style-type: none;
+      padding: 10px;
+    }
+    aside > .wrapper ul > li {
+      margin: 0.5rem 0;
+      border: 2px solid #8b8da0;
+      border-radius: 5px;
+      padding: 0 0.5rem;
+    }
+    aside > .wrapper > div > h3 {
+      display: none;
+    }
+    aside > .wrapper > .design-selection {
+      background: pink;
+      order: 2;
+    }
+      aside > .wrapper > .design-selection li {
+        font-size: 0.7rem;
+      }
+
+        aside > .wrapper > .design-selection li a {
+          font-size: 1rem;
+        }
+        aside > .wrapper > .design-selection li > a:first-child {
+          display: block;
+          font-family: 'Suez One', serif;
+        }
+
+    aside > .wrapper > .design-archive {
+      order: 1;
+    }
+    aside > .wrapper > .zen-resources {
+      order: 3;
+    }
+
+  /* ====================== DESIGN SELECTION ============================*/
+
+  /* .design-selection {
+
+  } */
+
+/* ========================================================= */
+/* ================== SCREEN SIZE > 580px ================== */
+/* ========================================================= */
+
+@media screen and (min-width: 580px) {
+  html {
+    font-size: 16px;
+  }
+  /* div.main {
+    display: flex;
+    flex-wrap: wrap;
+  } */
+
+  div.main > div {
+    /* flex: 0 1 60%; */
+    margin: 2rem 15%;
+  }
+
+  div.main > div:nth-last-of-type(2n+1) {
+    justify-content: right;
+  }
+}
+
+
+@media screen and (min-width: 793px) {
+  /* ====================================================================*/
+  /* ======================== INTRO / BANNER ============================*/
+  /* ==================================================================== */
+    section.intro {
+      order: 1;
+    }
+
+    /* ====================================================================*/
+    /* ====================== MAIN SUPPORTING =============================*/
+    /* ====================================================================*/
+
+    div.main {
+      order: 3;
+    }
+
+    /* ====================================================================*/
+    /* ============================== ASIDE ===============================*/
+    /* ====================================================================*/
+
+    aside.sidebar {
+      order: 2;
+    }
+}
