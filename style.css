@@ -33,7 +33,7 @@ body {
 
 .page-wrapper {
   background: #c9bbae;
-  margin: 0.5%;
+  margin: 0.5rem;
   border-radius: 10px;
   flex: 0 1 1100px;
 }
@@ -48,6 +48,7 @@ body {
 div.page-wrapper {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
 }
 
 /* ======================= TEXT / LINKS ===================================*/
@@ -55,7 +56,6 @@ p {
   color: #50423d;
   font-family: helvetica, sans-serif;
 }
-
 h3 {
   font-family: 'Suez One', serif;
   font-size: 1.5rem;
@@ -76,6 +76,7 @@ a:hover {
 
 section.intro {
   flex: 1 1 500px; /* margin is 5 */
+  margin-right: 260px;
 }
 
     header {
@@ -115,6 +116,7 @@ section.intro {
 
 div.main {
   flex: 1 1 500px;
+  margin-right: 260px;
   /* display: flex; */
   /* flex-wrap: wrap; */
 }
@@ -160,7 +162,11 @@ div.main > div:hover > p {
 /* ============================== ASIDE ===============================*/
 
 aside.sidebar {
-  flex: 0 0 250px;
+  width: 250px;
+  /* position: fixed;
+  right: calc((100% - 1100px) / 2); */
+  /* flex: 0 0 250px; */
+  /* background-color: #BB2200;  */
 }
 
   aside > div.wrapper {
@@ -188,7 +194,6 @@ aside.sidebar {
       aside > .wrapper > .design-selection li {
         font-size: 0.7rem;
       }
-
         aside > .wrapper > .design-selection li a {
           font-size: 1rem;
         }
@@ -196,7 +201,6 @@ aside.sidebar {
           display: block;
           font-family: 'Suez One', serif;
         }
-
     aside > .wrapper > .design-archive {
       order: 1;
     }
@@ -233,6 +237,17 @@ aside.sidebar {
   }
 }
 
+/* ====================================================================*/
+/* ============================== ASIDE ===============================*/
+aside.sidebar {
+  width: 250px;
+  height: 99%;
+  position: absolute;
+  overflow: auto;
+  right: 0;
+  /* flex: 0 0 250px; */
+  /* background-color: #BB2200;  */
+}
 
 @media screen and (min-width: 793px) {
   /* ====================================================================*/
