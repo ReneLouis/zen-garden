@@ -142,10 +142,23 @@ div.main > footer > a {
 }
 
   /* ====================== HIDE & DISPLAY EACH SUBTEXT ============================*/
-
+/* div.main > div {
+} */
+div.main > div:before {
+  content: ' ';
+  background-image: url("arrow.svg");
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 1rem;
+  left: 3rem;
+}
 div.main > div > h3 {
   text-align: center;
   color: #8d7361;
+  display: inline-block;
+  width: calc(100% - 60px);
   font-family: 'Hachi Maru Pop', cursive;
 }
 
@@ -155,6 +168,7 @@ div.main > div > p {
 
 div.main > div:hover > p {
   display: block;
+  /* flex: 0 0 100%; */
 }
 
 
