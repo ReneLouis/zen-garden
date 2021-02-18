@@ -117,16 +117,12 @@ section.intro {
 div.main {
   flex: 1 1 500px;
   margin-right: 260px;
-  /* display: flex; */
-  /* flex-wrap: wrap; */
 }
 
 div.main > div {
   border: 5px solid #c9bbae;
   border-radius: 2rem;
   margin: 2rem 10%;
-  /* flex: 1 1 calc(400px - 4rem); */
-  /* flex: 0 1 60%; */
 }
 
 div.main > footer {
@@ -141,9 +137,6 @@ div.main > footer > a {
   flex: 1 0 10rem;
 }
 
-  /* ====================== HIDE & DISPLAY EACH SUBTEXT ============================*/
-/* div.main > div {
-} */
 div.main > div:before {
   content: ' ';
   background-image: url("arrow.svg");
@@ -153,6 +146,7 @@ div.main > div:before {
   position: relative;
   top: 1rem;
   left: 3rem;
+  transition-duration: 0.8s;
 }
 div.main > div > h3 {
   text-align: center;
@@ -162,15 +156,19 @@ div.main > div > h3 {
   font-family: 'Hachi Maru Pop', cursive;
 }
 
+  /* ====================== HIDE & DISPLAY EACH SUBTEXT ============================*/
+
 div.main > div > p {
   display: none;
 }
-
+div.main > div:hover:before {
+  transform: rotate(90deg);
+}
 div.main > div:hover > p {
   display: block;
   /* flex: 0 0 100%; */
+  transition-duration: 0.8;
 }
-
 
 /* ====================================================================*/
 /* ============================== ASIDE ===============================*/
@@ -182,24 +180,22 @@ aside.sidebar {
   /* flex: 0 0 250px; */
   /* background-color: #BB2200;  */
 }
-
   aside > div.wrapper {
     display: flex;
     flex-direction: column;
   }
-
     aside > .wrapper ul {
       list-style-type: none;
       padding: 10px;
     }
     aside > .wrapper ul > li {
-      margin: 0.5rem 0;
+      margin: 0.5rem 0.7rem 0 0;
       border: 2px solid #8b8da0;
       border-radius: 5px;
       padding: 0 0.5rem;
     }
     aside > .wrapper > div > h3 {
-      display: none;
+      /* display: none; */
     }
     aside > .wrapper > .design-selection {
       background: pink;
