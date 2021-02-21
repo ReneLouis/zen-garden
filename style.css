@@ -114,7 +114,7 @@ section.intro {
     .preamble {
       background-color: pink;                 /* HELPER */
     }
-  section.intro > div > p:last-child {
+  section.intro > div.summary > p:last-child {
     display: inline-block;
     position: relative;
     left: 60px;
@@ -162,22 +162,27 @@ div.main > div > h3 {
 
 /* ====================================================================*/
 /* ============================== ASIDE ===============================*/
-@media screen and (max-width: 262px) {
-  :root {
-    --menuPosition: 14.25rem;
+@media screen and (max-width: 265px) {
+  :root {
+    --menu: 14.25rem;
   }
 }
-@media screen and (max-width: 330px) {
-  :root {
-    --menuPosition: 12.75rem;
+@media screen and (min-width: 266px) {
+  :root {
+    --menu: 12.75rem;
   }
 }
-@media screen and (max-width: 500px) {
-  :root {
-    --menuPosition: 11.25rem;
+@media screen and (min-width: 330px) {
+  :root {
+    --menu: 11.25rem;
   }
 }
-aside:before {
+@media screen and (min-width: 460px) {
+  :root {
+    --menu: 9.75rem;
+  }
+}
+aside.sidebar:before {
   content: ' ';
   display: inline-block;
   background-image: url(arrow.svg);
@@ -187,8 +192,8 @@ aside:before {
 aside.sidebar {
   flex-wrap: wrap;
   position: absolute;
-  left: 1rem;
-  top: 12.75rem;
+  left: 0.5rem;
+  top: var(--menu); /* 12.75rem */
   line-height: 0;
 }
 aside.sidebar > * {
@@ -197,12 +202,9 @@ aside.sidebar > * {
   aside.sidebar > div.wrapper {
     display: none;
   }
-  /* aside.sidebar:hover:before {
-    display: inline-block;
-  } */
-    aside > div > div {
+    aside.sidebar > div.wrapper > div {
       display: inline-block;
-      width: 180px;
+      width: 170px;
     }
     aside > .wrapper ul {
       list-style-type: none;
@@ -245,6 +247,9 @@ aside.sidebar > * {
 div.main > div > p {
   display: none;
 }
+div.main > div:before, aside.sidebar:before {
+  transition-duration: 0.8s;
+}
 div.main > div:hover:before, aside.sidebar:hover:before {
   transform: rotate(90deg);
   transition-duration: 0.8s;
@@ -257,7 +262,7 @@ div.main > div:hover > p, aside.sidebar:hover > div {
 /* ================== SCREEN SIZE > 580px ================== */
 /* ========================================================= */
 
-@media all and (min-width: 600px) {
+@media screen and (min-width: 600px) {
   /* ====================================================================*/
   /* ============================== ASIDE ===============================*/
   aside.sidebar:before {
@@ -266,7 +271,12 @@ div.main > div:hover > p, aside.sidebar:hover > div {
   aside.sidebar > div.wrapper {
     display: block;
   }
+  section.intro > div.summary > p:last-child {
+    margin-top: 2.5rem;
+    left: 0px;
+  }
 }
+
 
 @media screen and (min-width: 793px) {
   /* ====================================================================*/
