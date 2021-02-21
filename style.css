@@ -30,21 +30,18 @@ body {
   display: flex;
   justify-content: center;
 }
-
 .page-wrapper {
   background: #c9bbae;
   margin: 0.5rem;
   border-radius: 10px;
   flex: 0 1 1100px;
 }
-
 .page-wrapper > * {
   border: 2px solid #50423d;
   border-radius: 10px;
   margin: 5px;
   background: #eeebe7 ;
 }
-
 div.page-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -76,67 +73,75 @@ a:hover {
 
 section.intro {
   flex: 1 1 500px; /* margin is 5 */
-  margin-right: 260px;
+  /* margin-right: 260px; */
 }
-
     header {
       padding: 1em 0;
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
+      height: 5.75rem;
     }
-
       header > h1 {
         font-family: 'Hachi Maru Pop', cursive;
         font-size: 1.6rem;
         margin: 0;
         padding: 0.5rem 0;
         transform: rotate(350deg);
-        flex: 0 0 auto;
+        flex: 0 1 auto;
+        text-align: center;
       }
-
       header > h2 {
         font-family: 'Josefin Slab', serif;
         font-size: 1.5rem;
         margin: 0;
         padding-top: 1.5rem;
         text-align: center;
-        flex: 1 0 250px;
+        flex: 1 1 auto;
       }
-
+      .intro > .summary > p:first-child {
+        /* height: 10.5rem; */
+        /* padding: 0.5rem; */
+      }
+      /* .intro > .summary > p:first-child:after{
+        display: block;
+        content: '';
+        background-color: green;
+        height:6rem;
+      } */
     .summary {
       background-color: yellow;               /* HELPER */
     }
-
     .preamble {
       background-color: pink;                 /* HELPER */
     }
+  section.intro > div > p:last-child {
+    display: inline-block;
+    position: relative;
+    left: 60px;
+  }
 
 /* ====================================================================*/
 /* ====================== MAIN SUPPORTING =============================*/
 
 div.main {
   flex: 1 1 500px;
-  margin-right: 260px;
+  /* margin-right: 260px; */
 }
-
 div.main > div {
   border: 5px solid #c9bbae;
   border-radius: 2rem;
   margin: 2rem 10%;
 }
-
 div.main > footer {
   flex: 1 0 100%;
   display: flex;
   flex-wrap: wrap;
   text-align: center;
 }
-
 div.main > footer > a {
   display: inline-block;
   flex: 1 0 10rem;
 }
-
 div.main > div:before {
   content: ' ';
   background-image: url("arrow.svg");
@@ -146,7 +151,6 @@ div.main > div:before {
   position: relative;
   top: 1rem;
   left: 3rem;
-  transition-duration: 0.8s;
 }
 div.main > div > h3 {
   text-align: center;
@@ -156,37 +160,54 @@ div.main > div > h3 {
   font-family: 'Hachi Maru Pop', cursive;
 }
 
-  /* ====================== HIDE & DISPLAY EACH SUBTEXT ============================*/
-
-div.main > div > p {
-  display: none;
-}
-div.main > div:hover:before {
-  transform: rotate(90deg);
-}
-div.main > div:hover > p {
-  display: block;
-  /* flex: 0 0 100%; */
-  transition-duration: 0.8;
-}
-
 /* ====================================================================*/
 /* ============================== ASIDE ===============================*/
-
-aside.sidebar {
-  width: 250px;
-  /* position: fixed;
-  right: calc((100% - 1100px) / 2); */
-  /* flex: 0 0 250px; */
-  /* background-color: #BB2200;  */
-}
-  aside > div.wrapper {
-    display: flex;
-    flex-direction: column;
+@media screen and (max-width: 262px) {
+  :root {
+    --menuPosition: 14.25rem;
   }
+}
+@media screen and (max-width: 330px) {
+  :root {
+    --menuPosition: 12.75rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  :root {
+    --menuPosition: 11.25rem;
+  }
+}
+aside:before {
+  content: ' ';
+  display: inline-block;
+  background-image: url(arrow.svg);
+  height: 50px;
+  width: 50px;
+}
+aside.sidebar {
+  flex-wrap: wrap;
+  position: absolute;
+  left: 1rem;
+  top: 12.75rem;
+  line-height: 0;
+}
+aside.sidebar > * {
+  line-height: 1.5rem;
+}
+  aside.sidebar > div.wrapper {
+    display: none;
+  }
+  /* aside.sidebar:hover:before {
+    display: inline-block;
+  } */
+    aside > div > div {
+      display: inline-block;
+      width: 180px;
+    }
     aside > .wrapper ul {
       list-style-type: none;
       padding: 10px;
+      margin: 0;
     }
     aside > .wrapper ul > li {
       margin: 0.5rem 0.7rem 0 0;
@@ -196,10 +217,17 @@ aside.sidebar {
     }
     aside > .wrapper > div > h3 {
       /* display: none; */
+      color: #8d7361;
+      font-size: 1rem;
+      font-family: 'Hachi Maru Pop', cursive;
     }
-    aside > .wrapper > .design-selection {
-      background: pink;
-      order: 2;
+    aside > .wrapper > div > nav, aside > .wrapper > div > ul {
+      display: none;
+      position: absolute;
+      background-color: pink;
+    }
+    aside > .wrapper > div:hover > nav, aside > .wrapper > div:hover > ul {
+      display: block;
     }
       aside > .wrapper > .design-selection li {
         font-size: 0.7rem;
@@ -211,52 +239,33 @@ aside.sidebar {
           display: block;
           font-family: 'Suez One', serif;
         }
-    aside > .wrapper > .design-archive {
-      order: 1;
-    }
-    aside > .wrapper > .zen-resources {
-      order: 3;
-    }
 
-  /* ====================== DESIGN SELECTION ============================*/
+  /* ====================== HIDE & DISPLAY ANIMATION ============================*/
 
-  /* .design-selection {
-
-  } */
+div.main > div > p {
+  display: none;
+}
+div.main > div:hover:before, aside.sidebar:hover:before {
+  transform: rotate(90deg);
+  transition-duration: 0.8s;
+}
+div.main > div:hover > p, aside.sidebar:hover > div {
+  display: block;
+}
 
 /* ========================================================= */
 /* ================== SCREEN SIZE > 580px ================== */
 /* ========================================================= */
 
-@media screen and (min-width: 580px) {
-  html {
-    font-size: 16px;
+@media all and (min-width: 600px) {
+  /* ====================================================================*/
+  /* ============================== ASIDE ===============================*/
+  aside.sidebar:before {
+    display: none;
   }
-  /* div.main {
-    display: flex;
-    flex-wrap: wrap;
-  } */
-
-  div.main > div {
-    /* flex: 0 1 60%; */
-    margin: 2rem 15%;
+  aside.sidebar > div.wrapper {
+    display: block;
   }
-
-  div.main > div:nth-last-of-type(2n+1) {
-    justify-content: right;
-  }
-}
-
-/* ====================================================================*/
-/* ============================== ASIDE ===============================*/
-aside.sidebar {
-  width: 250px;
-  height: 99%;
-  position: absolute;
-  overflow: auto;
-  right: 0;
-  /* flex: 0 0 250px; */
-  /* background-color: #BB2200;  */
 }
 
 @media screen and (min-width: 793px) {
@@ -264,7 +273,7 @@ aside.sidebar {
   /* ======================== INTRO / BANNER ============================*/
   /* ==================================================================== */
     section.intro {
-      order: 1;
+      /* order: 1; */
     }
 
     /* ====================================================================*/
@@ -272,7 +281,7 @@ aside.sidebar {
     /* ====================================================================*/
 
     div.main {
-      order: 3;
+      /* order: 3; */
     }
 
     /* ====================================================================*/
@@ -280,6 +289,6 @@ aside.sidebar {
     /* ====================================================================*/
 
     aside.sidebar {
-      order: 2;
+      /* order: 2; */
     }
 }
