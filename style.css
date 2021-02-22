@@ -17,7 +17,7 @@ html {
   box-sizing:border-box;
   margin: 0;
   padding: 0;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.5;
 }
 *, *:before, *:after {
@@ -73,7 +73,6 @@ a:hover {
 
 section.intro {
   flex: 1 1 500px; /* margin is 5 */
-  /* margin-right: 260px; */
 }
     header {
       padding: 1em 0;
@@ -108,8 +107,14 @@ section.intro {
         background-color: green;
         height:6rem;
       } */
-    .summary {
+    .page-wrapper section.intro .summary {
       background-color: yellow;               /* HELPER */
+      max-width: 80%;
+      margin: 0 auto;
+      /* margin-left: 60px; */
+    }
+    .page-wrapper section.intro .summary * {
+      /* margin: 0 auto; */
     }
     .preamble {
       background-color: pink;                 /* HELPER */
@@ -118,6 +123,7 @@ section.intro {
     display: inline-block;
     position: relative;
     left: 60px;
+    width: calc(100% - 60px);
   }
 
 /* ====================================================================*/
@@ -143,14 +149,13 @@ div.main > footer > a {
   flex: 1 0 10rem;
 }
 div.main > div:before {
-  content: ' ';
-  background-image: url("arrow.svg");
+  content: url("arrow.svg");
   display: inline-block;
   width: 50px;
   height: 50px;
   position: relative;
   top: 1rem;
-  left: 3rem;
+  left: 2rem;
 }
 div.main > div > h3 {
   text-align: center;
@@ -190,7 +195,7 @@ aside.sidebar:before {
   width: 50px;
 }
 aside.sidebar {
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   position: absolute;
   left: 0.5rem;
   top: var(--menu); /* 12.75rem */
@@ -204,7 +209,9 @@ aside.sidebar > * {
   }
     aside.sidebar > div.wrapper > div {
       display: inline-block;
-      width: 170px;
+      /* width: 170px; */
+      position: relative;
+      padding: 0 1.5rem;
     }
     aside > .wrapper ul {
       list-style-type: none;
@@ -229,7 +236,10 @@ aside.sidebar > * {
       background-color: pink;
     }
     aside > .wrapper > div:hover > nav, aside > .wrapper > div:hover > ul {
+      position: absolute;
       display: block;
+      left: 10%;
+      width: 200px;
     }
       aside > .wrapper > .design-selection li {
         font-size: 0.7rem;
@@ -263,6 +273,9 @@ div.main > div:hover > p, aside.sidebar:hover > div {
 /* ========================================================= */
 
 @media screen and (min-width: 600px) {
+  html {
+    font-size: 14px;
+  }
   /* ====================================================================*/
   /* ============================== ASIDE ===============================*/
   aside.sidebar:before {
